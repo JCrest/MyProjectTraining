@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="#2C2F34"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/zzcomment_text"
+            android:layout_marginTop="20dp"
+            android:text="一、处理售后服务的基本原则"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/zzcomment_text"
+            android:text="顾客投诉内容确实是商品质量或服务有问题的，企业应无条件承担责任"
+            android:textSize="12sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/zzcomment_text"
+            android:text="二、处理售后服务的注意事项"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/zzcomment_text"
+            android:text=" 
+1、对所有顾客一视同仁，不以貌取人；\n
+2、接待顾客礼貌温和，不准挖苦讽刺、讥笑顾客；\n
+3、接待顾客投诉应在适当场合进行，卖场等公共场合处理；\n
+4、不准轻易向顾客做出任何职权范围外的承诺；\n
+5、告知顾客处理结果时讲清处理依据；\n
+6、因商品质量问题受理投诉时要向顾客致歉；"
+            android:textSize="12sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/zzcomment_text"
+            android:text=" 
+三、对于不能当时解决需要过后回复的售后服务"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/zzcomment_text"
+            android:text="
+1、接待人必须认真填写顾客投诉记录表，并及时通知相关负责人给顾客回复，并将回复结果记录在案，并装订成册；\n
+2、7天之内没有结果的，须立即上报至经理，经理必须给顾客回复，告知处理结果或处理进程；\n
+3、15天之内售后没有结果的，经理必须将此售后汇报给上一层经理；"
+            android:textSize="12sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/zzcomment_text"
+            android:text="四、售后服务管理规定"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/zzcomment_text"
+            android:text="
+1、售后服务总原则是解决在商场；\n
+2、售后服务执行首问负责制，责任人为接待顾客投诉的第一人；"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/zzcomment_text"
+            android:text="
+五、商品保持原样的四个要求"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/zzcomment_text"
+            android:text="
+1、商品本身原样；\n
+2、商品包装、挂牌保持原样；\n
+3、内装附件、配件和文件齐全；\n
+4、赠品、奖品等保持原样。"
+            android:textSize="12sp" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

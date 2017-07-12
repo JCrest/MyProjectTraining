@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.atguigu.l20_fragment3.MainActivity">
+
+
+    <fragment
+        android:name="com.atguigu.l20_fragment3.MyListFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"></FrameLayout>
+</LinearLayout>

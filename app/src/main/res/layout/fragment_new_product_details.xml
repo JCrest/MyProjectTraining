@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.jiangchuanfa.projecttraining.utils.MyScrollview xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:id="@+id/rv_product_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.example.jiangchuanfa.projecttraining.utils.MyScrollview>

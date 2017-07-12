@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--<ListView
+        android:id="@+id/lv_product_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp" />-->
+
+    <TextView
+        android:id="@+id/tv_goods_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="
+材质：100%锦纶\n
+颜色：淡绿色、淡粉色、亮白色、玫红色\n
+尺码：155/80A、160/84A、165/88A、170/92A、175/96A\n
+面料科技：EXOTHERM® FREE+ SUN轻量智能防晒科技"
+        android:textColor="@color/zzcomment_text"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:background="@color/goods_price" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="品牌简介"
+            android:textColor="@color/zzcomment_text"
+            android:textSize="11sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:background="@color/goods_price" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_brand_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="NORTHLAND"
+        android:textColor="@color/zzcomment_text"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_brand_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="来自奥地利的国宝级户外品牌NORTHLAND由著名登山家Gerwalt Pichler于1973年在奥地利第二大城市格拉茨创立。\n
+通过40多年的不断探索、积累和创新，NORTHLAND从专注极限攀岩与登山的专业技术品牌发展为涵盖户外徒步、户外旅行、城市休闲、滑雪等运动的全线户外先驱。如今，NORTHLAND已在全球42个国家拥有超过2000家店铺，跻身国际知名的户外品牌"
+        android:textColor="@color/zzcomment_text"
+        android:textSize="11sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:background="@color/goods_price" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="良仓推荐"
+            android:textColor="@color/zzcomment_text"
+            android:textSize="11sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:background="@color/goods_price" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/brand_logo_empty" />
+
+    <TextView
+        android:id="@+id/tv_rec_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="1. 进口天然橡胶更加环保安全，可在大自然中完全降解；\n
+2. 进口舒丽皮历经十几道工序，执行标准更严格，环保达欧盟标准，防滑及抓地性"
+        android:textColor="@color/zzcomment_text"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:background="@color/goods_price" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="猜你喜欢"
+            android:textColor="@color/zzcomment_text"
+            android:textSize="11sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:background="@color/goods_price" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_guess_you_like"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+</LinearLayout>
