@@ -37,7 +37,11 @@
         <activity android:name=".activity.GoodsInfoActivity" />
         <activity android:name=".activity.AftermarketInformationActivity" />
         <activity android:name=".activity.BrandInfoActivity" />
-        <activity android:name=".activity.WebViewActivity"></activity>
+        <activity android:name=".activity.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            >
+
+        </activity>
     </application>
 
 </manifest>
