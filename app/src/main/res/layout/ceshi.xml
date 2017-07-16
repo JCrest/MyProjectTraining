@@ -8,7 +8,7 @@
         android:gravity="center"
         android:id="@+id/tv_ceshi"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="1000dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="这个是测试页面！"

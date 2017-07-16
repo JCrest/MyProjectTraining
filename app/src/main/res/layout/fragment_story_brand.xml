@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_brand_desc"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="
+以出售极具设计感的纸制品闻名的Midori，如今已经成为日本顶级生活文具品牌。自1950年创立以来，Midori始终将越用越好的设计作为衡量标准，并赋予产品更为浓厚的感性元素。60年来，Midori在追求此理念的助力下从未停止前进的步伐，通过高品质的文具为我们的生活、工作和旅行带来了无限的乐趣。"
+        android:textSize="14sp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="@color/brand_desc"/>
+
+
+
+</LinearLayout>

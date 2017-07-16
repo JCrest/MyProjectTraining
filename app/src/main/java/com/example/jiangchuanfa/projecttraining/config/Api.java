@@ -71,6 +71,25 @@ public class Api {
 
     //商店品牌：总
     public static final String SHOP_BRAND_URL = SHOP_BASE_URL + "/brand/brandList?app_key=Android&count=20&page=1&sig=430BD99E6C913B8B8C3ED109737ECF15%7C830952120106768&v=1.0";
+
+    //品牌列表头
+    public static final String BRAND_LIST_HEAD_URL ="http://mobile.iliangcang.com/brand/brandList?app_key=Android&count=20&page=";
+    //品牌列表weib
+    public static final String BRAND_LIST_TAIL_URL ="&sig=430BD99E6C913B8B8C3ED109737ECF15%7C830952120106768&v=1.0";
+
+    //品牌详情头
+    public static final String BRAND_INFO_HEAD_URL ="http://mobile.iliangcang.com/brand/brandShopList?app_key=Android&brand_id=";
+
+    //品牌详情尾
+    public static final String BRAND_INFO_TAIL_URL ="&count=20&page=1&sig=430BD99E6C913B8B8C3ED109737ECF15%7C830952120106768&v=1.0";
+
+
+
+
+
+
+
+
 //
 //    //商品分类路径：头部
 //    public static final String SHOP_HEAD_URL = SHOP_BASE_URL+"Share?app_key=Android&cat_code=";
@@ -116,6 +135,8 @@ public class Api {
 
     //magazine  首页面网址接口
     public static final String MAG_TOPIC_URL ="http://mobile.iliangcang.com/topic/magazineList?app_key=Android&author_id=1&sig=2FA0974FFF1BC3DFA562AA63C8B5A84F%7C118265010131868&v=1.0";
+
+
 
 
 }

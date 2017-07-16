@@ -4,13 +4,18 @@
     <color name="colorPrimaryDark">@color/concern_guide_layout_bg_color</color>
     <color name="colorAccent">@color/heise8</color>
     <color name="clickableBackground">@color/white</color>
+    <color name="radio_button">#16171A</color>
 
     <color name="bg_grey">#F5F5F5</color>
+    <color name="zzcomment_text">#ff707070</color>
+    <color name="detail_divider">#ffb4b4b4</color>
+    <color name="brand_desc">#ffb4b4b4</color>
 
     <color name="font_main">#595959</color>
     <color name="buyer_reading">#444950</color>
     <color name="font_main_p">#F85959</color>
     <color name="ssqianhui">#F4F5F7</color>
+    <color name="appad_v18_button_success_normal_bg_night">#1E2125</color>
 
     <color name="goodslist_pic_bg">#313335</color>
     <color name="screen_bg">#1E2125</color>
@@ -26,7 +31,6 @@
     <color name="concern_guide_dialog_devider">@color/ssxinmian4</color>
     <color name="detail_activity_bg_color">#fff8f8f8</color>
     <color name="detail_dialog_item_press">@color/ssxinzi9</color>
-    <color name="detail_divider">#ffb4b4b4</color>
     <color name="discover_titlebar_old_bg">@color/ssxinmian4</color>
     <color name="forum_browser_bg">@color/transparent</color>
     <color name="live_status_end">#ffe8e8e8</color>
@@ -36,7 +40,6 @@
     <color name="movie_score">#ffffc345</color>
     <color name="post_detail_write_comment_divider">#ffcacaca</color>
     <color name="progress_dlg_content_text_color">@color/heise8</color>
-    <color name="report_dialog_bg">#fff8f8f8</color>
     <color name="search_text">@color/ssxinzi1</color>
     <color name="search_text_hint">@color/ssxinzi3</color>
     <color name="ssxinheise1">#ff000000</color>
@@ -163,7 +166,6 @@
     <color name="user_info_cancel">#ffcacaca</color>
     <color name="wenda_user_avatar_round_border_color">#80e8e8e8</color>
     <color name="word_text_color_selected">@color/ssxinbaise4</color>
-    <color name="zzcomment_text">#ff707070</color>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#ff7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -236,7 +238,6 @@
     <color name="appad_v18_button_pressed_stroke">#ffd0d0d0</color>
     <color name="appad_v18_button_pressed_stroke_night">#ff454545</color>
     <color name="appad_v18_button_success_normal_bg">#fffafafa</color>
-    <color name="appad_v18_button_success_normal_bg_night">#ff252525</color>
     <color name="appad_v18_button_success_normal_stroke">#ff2a90d7</color>
     <color name="appad_v18_button_success_normal_stroke_night">#ff67778b</color>
     <color name="appad_v18_button_success_pressed_bg">#ffededed</color>

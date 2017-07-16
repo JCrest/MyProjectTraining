@@ -1,21 +1,31 @@
 package com.example.jiangchuanfa.projecttraining.activity;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.jiangchuanfa.projecttraining.R;
 import com.example.jiangchuanfa.projecttraining.base.BaseActivity;
+import com.example.jiangchuanfa.projecttraining.config.Api;
 import com.example.jiangchuanfa.projecttraining.controller.fragment.BrandInfoFragment.ProductsBrandFragment;
 import com.example.jiangchuanfa.projecttraining.controller.fragment.BrandInfoFragment.StoryBrandFragment;
+import com.example.jiangchuanfa.projecttraining.modle.bean.BrandInfosBean;
+import com.google.gson.Gson;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
 import butterknife.BindView;
+import okhttp3.Call;
 
 public class BrandInfoActivity extends BaseActivity {
 
@@ -39,9 +49,13 @@ public class BrandInfoActivity extends BaseActivity {
     RadioGroup rgGoodsInfo;
     @BindView(R.id.ll_fragment_container)
     LinearLayout llFragmentContainer;
+    @BindView(R.id.iv_brand_logo)
+    ImageView ivBrandLogo;
 
     private StoryBrandFragment storyBrandFragment;
     private ProductsBrandFragment productsBrandFragment;
+    private String url;
+    private String brand_id;
 
     @Override
     public void initView() {
@@ -49,7 +63,8 @@ public class BrandInfoActivity extends BaseActivity {
         ibSearch.setVisibility(View.GONE);
         ibBack.setVisibility(View.VISIBLE);
         ibCart.setVisibility(View.GONE);
-        initProductsBrandFragment();
+        Intent intent = this.getIntent();
+        brand_id = intent.getStringExtra("brand_id");
     }
 
     @Override
@@ -65,42 +80,41 @@ public class BrandInfoActivity extends BaseActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
 
-                switchFragment(checkedId);
+                switchFragment(checkedId,"");
             }
         });
 
     }
 
-    private void switchFragment(int checkedId) {
+    private void switchFragment(int checkedId,String a) {
 
         switch (checkedId) {
             case R.id.rb_story_brand:
                 initStoryBrandFragment();
                 break;
             case R.id.rb_products_brand:
-                initProductsBrandFragment();
+                initProductsBrandFragment(a);
                 break;
         }
 
     }
 
-    private void initProductsBrandFragment() {
+    private void initProductsBrandFragment(String json) {
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         if (productsBrandFragment == null) {
             productsBrandFragment = new ProductsBrandFragment();
-            Log.e(TAG, "initBuyerReadingFragment: 难道每次都要new吗？" );
+            Bundle bundle = new Bundle();
+            bundle.putString("json", json);
+            this.productsBrandFragment.setArguments(bundle);
+            Log.e(TAG, "initBuyerReadingFragment: 难道每次都要new吗？");
             transaction.add(R.id.ll_fragment_container, productsBrandFragment);
-//            transaction.addToBackStack(null);
         }
         hideFragment(transaction);
         transaction.show(productsBrandFragment);
         rbProductsBrand.setBackgroundColor(getResources().getColor(R.color.clickableBackground));
         rbStoryBrand.setBackgroundColor(getResources().getColor(R.color.buyer_reading));
-
         transaction.commit();
-
-
     }
 
     private void hideFragment(FragmentTransaction transaction) {
@@ -135,10 +149,65 @@ public class BrandInfoActivity extends BaseActivity {
 
     @Override
     public void initData() {
+        url = Api.BRAND_INFO_HEAD_URL + brand_id + Api.BRAND_INFO_TAIL_URL;
+        Log.e(TAG, "品牌详情地址url==" + url);
+        getDataFromNet(url);
+
 
         rgGoodsInfo.check(R.id.rb_products_brand);
+    }
+
+    private void getDataFromNet(String url) {
+        OkHttpUtils
+                .get()
+                .url(url)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        Log.e(TAG, "okhttp商店品牌数据请求失败==" + e.getMessage());
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        Log.e(TAG, "okhttp商店品牌数据请求成功==" + response);
+                        processData(response);
+                        initProductsBrandFragment(response);
+
+                    }
+                });
+
+
+
+
 
     }
+
+    private void processData(String json) {
+        BrandInfosBean brandInfosBean = new Gson().fromJson(json, BrandInfosBean.class);
+        String brand_desc = brandInfosBean.getData().getItems().get(0).getBrand_info().getBrand_desc();
+        Log.e("TAG", "数组解析数据成功======" + brandInfosBean.getData().getItems().get(0).getBrand_info().getBrand_desc());
+//        adapter.refresh(brandBean.getData().getItems());
+        settingtital(brandInfosBean);
+        byValue2Fragment(brand_desc);
+
+    }
+
+    private void byValue2Fragment(String brand_desc) {
+        storyBrandFragment = new StoryBrandFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("brand_desc", brand_desc);
+        this.storyBrandFragment.setArguments(bundle);
+        getSupportFragmentManager().beginTransaction().add(R.id.ll_fragment_container, storyBrandFragment).commit();
+
+    }
+
+    private void settingtital(BrandInfosBean brandInfosBean) {
+        tvBrandName.setText(brandInfosBean.getData().getItems().get(0).getBrand_info().getBrand_name());
+        Glide.with(this).load(brandInfosBean.getData().getItems().get(0).getBrand_info().getBrand_logo()).into(ivBrandLogo);
+
+    }
+
 
     @Override
     public int getLayoutId() {

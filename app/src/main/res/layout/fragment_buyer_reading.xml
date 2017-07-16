@@ -3,30 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <TextView
-        android:layout_marginTop="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
         android:text="
 所有商品均为正品保证。\n
 中国大陆地区免运费，默认商家合作快递。\n
 蜡烛、液态品、手表等含电池产品无法空运，运输时间相较普通空运件会更久。\n
 如出现产品质量问题请在签收后72小时内联系客服。"
-        android:textSize="11sp"
-        android:lineSpacingExtra="3dp"
-        android:lineSpacingMultiplier="1.5"
-        android:textColor="@color/zzcomment_text"/>
+        android:textColor="@color/zzcomment_text"
+        android:textSize="11sp" />
+
     <Button
         android:id="@+id/btn_buyer_reading"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/buyer_reading"
+        android:button="@null"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:background="@color/buyer_reading"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:button="@null"
         android:text="售后须知"
-        android:textColor="@color/detail_divider"/>
+        android:textColor="@color/brand_desc" />
 
 
 </LinearLayout>

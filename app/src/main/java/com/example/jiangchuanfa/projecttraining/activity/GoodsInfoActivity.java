@@ -93,6 +93,8 @@ public class GoodsInfoActivity extends BaseActivity {
 
     private String url;
     private ProductDetailsFragment productDetailsFragment;
+
+
     private BuyerReadingFragment buyerReadingFragment;
 
     private ViewPager viewPager;
@@ -103,12 +105,16 @@ public class GoodsInfoActivity extends BaseActivity {
     @Override
     public void initView() {
         initProductDetailsFragment();
+
+
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         iv_zhekou = (ImageView) findViewById(R.id.iv_zhekou);
         ll_point_group = (LinearLayout) findViewById(R.id.ll_point_group);
 
 
     }
+
+
 
     @Override
     public void initListener() {
@@ -128,11 +134,9 @@ public class GoodsInfoActivity extends BaseActivity {
         switch (checkedId) {
             case R.id.rb_product_details:
                 initProductDetailsFragment();
-//                rbProductDetails.setTextColor(getResources().getColor(R.color.clickableBackground));
                 break;
             case R.id.rb_buyer_reading:
                 initBuyerReadingFragment();
-//                rbProductDetails.setTextColor(getResources().getColor(R.color.buyer_reading));
                 break;
         }
 
@@ -163,6 +167,8 @@ public class GoodsInfoActivity extends BaseActivity {
         }
     }
 
+
+
     private void initProductDetailsFragment() {
         //开启事务，fragment的控制是由事务来实现的
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -178,7 +184,6 @@ public class GoodsInfoActivity extends BaseActivity {
         transaction.show(productDetailsFragment);
         rbProductDetails.setBackgroundColor(getResources().getColor(R.color.clickableBackground));
         rbBuyerReading.setBackgroundColor(getResources().getColor(R.color.buyer_reading));
-
         //提交事务
         transaction.commit();
     }
@@ -277,7 +282,7 @@ public class GoodsInfoActivity extends BaseActivity {
                 break;
             case R.id.iv_share:
                 showToast("这个是分享");
-                break;
+                    break;
             case R.id.ll_size_choose:
                 showToast("选择尺寸");
                 break;

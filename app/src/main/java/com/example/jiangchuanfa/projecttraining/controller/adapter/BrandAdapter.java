@@ -80,7 +80,17 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.ViewHolder> 
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(context, BrandInfoActivity.class);
-                    context.startActivity(intent);
+                    if (getLayoutPosition() % 20 == 0 ||getLayoutPosition() % 20 == 2 || getLayoutPosition() % 20 == 4 || getLayoutPosition() % 20 == 16) {
+                        int i = getLayoutPosition() % 20 + 3;
+                        intent.putExtra("brand_id", Integer.toString(i));
+//                        Toast.makeText(context, "" + getLayoutPosition() % 20, Toast.LENGTH_SHORT).show();
+                        context.startActivity(intent);
+                    }else {
+                        intent.putExtra("brand_id", Integer.toString(getLayoutPosition() % 20));
+//                        Toast.makeText(context, "" + getLayoutPosition() % 20, Toast.LENGTH_SHORT).show();
+                        context.startActivity(intent);
+                    }
+
                 }
             });
 

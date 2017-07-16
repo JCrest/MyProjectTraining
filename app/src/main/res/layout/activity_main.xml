@@ -20,7 +20,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.08"
 
-        android:background="@color/screen_bg"
+        android:background="@color/radio_button"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
