@@ -12,30 +12,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="E:\AndroidCode\ProjectTraining\app\libs\eventbus.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="bce1c8d061ecc7d7664ae13bb5d29543ff93ca52">
-        <dex dex="E:\AndroidCode\ProjectTraining\app\build\intermediates\pre-dexed\debug\eventbus_c5034c3f213677e072d42518774c77601870b197.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="E:\MyNewCode\MyProjectTraining\app\libs\eventbus.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="bce1c8d061ecc7d7664ae13bb5d29543ff93ca52">
         <dex dex="E:\MyNewCode\MyProjectTraining\app\build\intermediates\pre-dexed\debug\eventbus_98eb9966e6576f5ce6f808fb3f9c808bcaa645f4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="E:\AndroidCode\ProjectTraining\Image-Loader_library\build\intermediates\bundles\default\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.3"
-        sha1="b0c9ca1cda701676782cc37e5d7dc79529137531">
-        <dex dex="E:\AndroidCode\ProjectTraining\app\build\intermediates\pre-dexed\debug\classes_2d58bdf5241cd614db55ade1374b87d237796fdb.jar" />
     </item>
 
 </items>

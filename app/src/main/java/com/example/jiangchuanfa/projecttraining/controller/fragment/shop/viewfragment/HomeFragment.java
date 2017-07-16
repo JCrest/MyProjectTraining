@@ -1,7 +1,7 @@
 package com.example.jiangchuanfa.projecttraining.controller.fragment.shop.viewfragment;
 
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.View;
 
@@ -21,13 +21,18 @@ import okhttp3.Call;
 
 /**
  * Created by crest on 2017/7/6.
+ *
  */
 
 public class HomeFragment extends BaseFragment {
     private static final String TAG = HomeFragment.class.getSimpleName();
+
+    Unbinder unbinder;
     @BindView(R.id.rv_home)
     RecyclerView rvHome;
-    Unbinder unbinder;
+
+
+
     private String homeUrl;
     private HomeAdapter adapter;
 
@@ -55,7 +60,6 @@ public class HomeFragment extends BaseFragment {
                 .build()
                 .execute(new MyStringCallback());
     }
-
     class MyStringCallback extends StringCallback {
 
         @Override
@@ -74,16 +78,13 @@ public class HomeFragment extends BaseFragment {
     private void processData(String json) {
         //解析数据
         HomeBean homeBean = new Gson().fromJson(json, HomeBean.class);
-        Log.e(TAG, "数据解析结果=="+homeBean.getData().getItems().getList().get(0).getHome_id());
+        Log.e(TAG, "数据解析结果==" + homeBean.getData().getItems().getList().get(0).getHome_type());
         //设置适配器
-        adapter = new HomeAdapter(context,homeBean.getData().getItems().getList());
+        adapter = new HomeAdapter(context, homeBean.getData().getItems().getList());
         rvHome.setAdapter(adapter);
-        LinearLayoutManager manager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
-        rvHome.setLayoutManager(manager);
-
+//        StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(context, 2, StaggeredGridLayoutManager.VERTICAL);
+        rvHome.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
     }
-
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();

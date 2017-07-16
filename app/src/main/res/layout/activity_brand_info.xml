@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appad_v18_button_success_normal_bg_night"
+    android:orientation="vertical"
+    tools:context="com.example.jiangchuanfa.projecttraining.activity.BrandInfoActivity">
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/brand_bg"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_brand_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/brand_logo_empty" />
+
+            <TextView
+                android:id="@+id/tv_brand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="良仓你身边的优品"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_goods_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_story_brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/buyer_reading"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="7.5dp"
+            android:paddingTop="7.5dp"
+            android:text="品牌故事"
+            android:textColor="@drawable/rb_goods_details_textcolor_selector"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rb_products_brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/buyer_reading"
+            android:button="@color/transparent"
+            android:gravity="center"
+            android:paddingBottom="7.5dp"
+            android:paddingTop="7.5dp"
+            android:text="品牌产品"
+            android:textColor="@drawable/rb_goods_details_textcolor_selector"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+</LinearLayout>

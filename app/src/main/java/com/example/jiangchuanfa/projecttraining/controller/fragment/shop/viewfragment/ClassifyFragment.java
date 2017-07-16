@@ -70,7 +70,6 @@ public class ClassifyFragment extends BaseFragment {
                 Bundle bundle = new Bundle();
                 bundle.putString("data", SHOP_ALL_URL[position]);
                 ClassifyFragment.this.goodsListFragment.setArguments(bundle);
-
                 FragmentTransaction transaction = mainActivity.getSupportFragmentManager().beginTransaction();
 //                FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.add(R.id.fl_main, ClassifyFragment.this.goodsListFragment,"goodsListFragment");

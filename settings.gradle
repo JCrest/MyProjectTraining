@@ -1,1 +1,1 @@
-include ':app', ':Image-Loader_library', ':L20_Fragment3'
+include ':app', ':Image-Loader_library', ':L20_Fragment3', ':RecyclerViewTest'

@@ -14,7 +14,6 @@ import com.example.jiangchuanfa.projecttraining.base.BaseFragment;
 import com.example.jiangchuanfa.projecttraining.controller.adapter.GoodsListAdapter;
 import com.example.jiangchuanfa.projecttraining.modle.bean.GoodsListBean;
 import com.google.gson.Gson;
-import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
@@ -63,7 +62,19 @@ public class GoodsListFragment extends BaseFragment {
         ibSearch.setVisibility(View.GONE);
         Log.e(TAG, "********************************************************************************");
 
-        refreshableRecycleView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
+
+//        refreshableRecycleView.setRefreshProgressStyle(ProgressStyle.LineScalePulseOut);
+        refreshableRecycleView.setLoadingListener(new XRecyclerView.LoadingListener() {
+            @Override
+            public void onRefresh() {
+                refreshData();
+            }
+
+            @Override
+            public void onLoadMore() {
+
+            }
+        });
 
         ibBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +107,14 @@ public class GoodsListFragment extends BaseFragment {
 
 
         return view;
+
+
+    }
+
+    private void refreshData() {
+        getDataFromNet(url);
+        refreshableRecycleView.refreshComplete();
+
 
 
     }

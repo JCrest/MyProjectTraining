@@ -1,15 +1,16 @@
 package com.example.jiangchuanfa.projecttraining.controller.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.jiangchuanfa.projecttraining.R;
+import com.example.jiangchuanfa.projecttraining.activity.BrandInfoActivity;
 import com.example.jiangchuanfa.projecttraining.modle.bean.BrandBean;
 
 import java.util.ArrayList;
@@ -75,11 +76,11 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.ViewHolder> 
             super(view);
             unbinder = ButterKnife.bind(this, view);
 
-
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context, "在这还崩！", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context, BrandInfoActivity.class);
+                    context.startActivity(intent);
                 }
             });
 

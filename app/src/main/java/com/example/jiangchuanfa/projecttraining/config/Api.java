@@ -114,4 +114,8 @@ public class Api {
     public static final String GOOD_DETAILS_TAIL = "&sig=BF287AF953103F390674E73DDA18CFD8%7C639843030233268&v=1.0";
 
 
+    //magazine  首页面网址接口
+    public static final String MAG_TOPIC_URL ="http://mobile.iliangcang.com/topic/magazineList?app_key=Android&author_id=1&sig=2FA0974FFF1BC3DFA562AA63C8B5A84F%7C118265010131868&v=1.0";
+
+
 }
