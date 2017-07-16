@@ -1,6 +1,7 @@
 package com.example.jiangchuanfa.projecttraining.controller.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
@@ -8,10 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.jiangchuanfa.projecttraining.R;
+import com.example.jiangchuanfa.projecttraining.activity.WebViewActivity;
 import com.example.jiangchuanfa.projecttraining.modle.bean.HomeBean;
 import com.example.jiangchuanfa.projecttraining.utils.GlideImageLoader;
 import com.youth.banner.Banner;
@@ -196,11 +197,24 @@ public class HomeAdapter extends RecyclerView.Adapter {
                             public void OnBannerClick(int position) {
                                 if (position < list.size()) {
                                     if (position == 0) {
-                                        Toast.makeText(context, "position==" + position, Toast.LENGTH_SHORT).show();
+//                                        Toast.makeText(context, "position==" + position, Toast.LENGTH_SHORT).show();
+//                                        Toast.makeText(context, "position==" +position+ list.get(position).getTopic_url(), Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(context, WebViewActivity.class);
+                                        intent.putExtra("topic_url", list.get(position).getTopic_url());
+                                        intent.putExtra("topic_name", list.get(position).getTopic_name());
+                                        context.startActivity(intent);
                                     } else if (position == 1) {
-                                        Toast.makeText(context, "position==" + position, Toast.LENGTH_SHORT).show();
+//                                        Toast.makeText(context, "position==" + position+list.get(position).getTopic_url(), Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(context, WebViewActivity.class);
+                                        intent.putExtra("topic_url", list.get(position).getTopic_url());
+                                        intent.putExtra("topic_name", list.get(position).getTopic_name());
+                                        context.startActivity(intent);
                                     } else if (position == 2) {
-                                        Toast.makeText(context, "position==" + position, Toast.LENGTH_SHORT).show();
+//                                        Toast.makeText(context, "position==" + position, Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(context, WebViewActivity.class);
+                                        intent.putExtra("topic_url", list.get(position).getTopic_url());
+                                        intent.putExtra("topic_name", list.get(position).getTopic_name());
+                                        context.startActivity(intent);
                                     }
                                 }
                             }
@@ -227,7 +241,12 @@ class LinearViewHolder extends RecyclerView.ViewHolder {
         ivLinear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, listBeanX.getOne().getPic_url(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, listBeanX.getOne().getPic_url(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(context, WebViewActivity.class);
+                intent.putExtra("topic_url", listBeanX.getOne().getTopic_url());
+                intent.putExtra("topic_name", listBeanX.getOne().getTopic_name());
+                context.startActivity(intent);
             }
         });
 
@@ -264,13 +283,21 @@ class GridViewHolder extends RecyclerView.ViewHolder {
         ivGvLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, listBeanX.getOne().getPic_url(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, listBeanX.getOne().getPic_url(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, WebViewActivity.class);
+                intent.putExtra("topic_url", listBeanX.getOne().getTopic_url());
+                intent.putExtra("topic_name", listBeanX.getOne().getTopic_name());
+                context.startActivity(intent);
             }
         });
         ivGvRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, listBeanX.getTwo().getPic_url(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, listBeanX.getTwo().getPic_url(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, WebViewActivity.class);
+                intent.putExtra("topic_url", listBeanX.getTwo().getTopic_url());
+                intent.putExtra("topic_name", listBeanX.getTwo().getTopic_name());
+                context.startActivity(intent);
             }
         });
     }
@@ -311,25 +338,41 @@ class StaggeredViewHolder extends RecyclerView.ViewHolder {
         staggerItemFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, listBeanX.getFour().getPic_url(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, listBeanX.getFour().getPic_url(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, WebViewActivity.class);
+                intent.putExtra("topic_url", listBeanX.getFour().getTopic_url());
+                intent.putExtra("topic_name", listBeanX.getFour().getTopic_name());
+                context.startActivity(intent);
             }
         });
         staggerItemThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, listBeanX.getThree().getPic_url(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, listBeanX.getThree().getPic_url(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, WebViewActivity.class);
+                intent.putExtra("topic_url", listBeanX.getThree().getTopic_url());
+                intent.putExtra("topic_name", listBeanX.getThree().getTopic_name());
+                context.startActivity(intent);
             }
         });
         staggerItemTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, listBeanX.getTwo().getPic_url(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, listBeanX.getTwo().getPic_url(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, WebViewActivity.class);
+                intent.putExtra("topic_url", listBeanX.getTwo().getTopic_url());
+                intent.putExtra("topic_name", listBeanX.getTwo().getTopic_name());
+                context.startActivity(intent);
             }
         });
         staggerItemOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, listBeanX.getOne().getPic_url(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, listBeanX.getOne().getPic_url(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, WebViewActivity.class);
+                intent.putExtra("topic_url", listBeanX.getOne().getTopic_url());
+                intent.putExtra("topic_name", listBeanX.getOne().getTopic_name());
+                context.startActivity(intent);
             }
         });
     }

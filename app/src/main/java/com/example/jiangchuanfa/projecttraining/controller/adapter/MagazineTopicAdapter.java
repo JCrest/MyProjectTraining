@@ -1,6 +1,7 @@
 package com.example.jiangchuanfa.projecttraining.controller.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.jiangchuanfa.projecttraining.R;
+import com.example.jiangchuanfa.projecttraining.activity.WebViewActivity;
 import com.example.jiangchuanfa.projecttraining.modle.bean.MagazineBean;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
@@ -97,6 +99,18 @@ public class MagazineTopicAdapter extends XRecyclerView.Adapter<MagazineTopicAda
         public ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
+            ivMag.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context, WebViewActivity.class);
+                    intent.putExtra("topic_url", datas.get(getLayoutPosition()-1).getAccess_url());
+                    intent.putExtra("topic_name", datas.get(getLayoutPosition()-1).getTopic_name());
+                    context.startActivity(intent);
+                }
+            });
         }
+
+
+
     }
 }

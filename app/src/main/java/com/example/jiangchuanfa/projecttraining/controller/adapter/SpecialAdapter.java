@@ -1,15 +1,17 @@
 package com.example.jiangchuanfa.projecttraining.controller.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.jiangchuanfa.projecttraining.R;
+import com.example.jiangchuanfa.projecttraining.activity.WebViewActivity;
 import com.example.jiangchuanfa.projecttraining.modle.bean.SpecialBean;
 
 import java.util.List;
@@ -55,20 +57,24 @@ public class SpecialAdapter extends RecyclerView.Adapter<SpecialAdapter.ViewHold
 //        Button btnSpecial;
         private ImageView iv_special;
         private TextView tvSpecial;
+        private FrameLayout flSpecial;
 
         public ViewHolder(View view) {
             super(view);
             iv_special = view.findViewById(R.id.iv_special);
             tvSpecial = view.findViewById(R.id.tv_special_fragment);
-
-//            ButterKnife.bind(context, view);
+            flSpecial = view.findViewById(R.id.fl_special);
 
 //            ivSpecial = view.findViewById(R.id.iv_special);
 //            btnSpecial = view.findViewById(R.id.btn_special_fragment);
             tvSpecial.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context, "在这还崩！", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "在这还崩！", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context, WebViewActivity.class);
+                    intent.putExtra("topic_url", datas.get(getLayoutPosition()).getAccess_url());
+                    intent.putExtra("topic_name", datas.get(getLayoutPosition()).getTopic_name());
+                    context.startActivity(intent);
                 }
             });
 
