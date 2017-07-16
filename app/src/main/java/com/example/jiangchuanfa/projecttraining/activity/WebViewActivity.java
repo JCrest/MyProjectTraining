@@ -72,7 +72,20 @@ public class WebViewActivity extends AppCompatActivity {
         settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
         settings.setCacheMode(WebSettings.LOAD_DEFAULT);
         mMyWebChromeClient = new MyWebChromeClient();
-        mWebView.setWebChromeClient(mMyWebChromeClient);
+        mWebView.setWebChromeClient(new MyWebChromeClient(){
+            @Override
+            public void onProgressChanged(WebView view, int newProgress) {
+                if (newProgress == 100) {
+                    headProgressBar.setVisibility(View.INVISIBLE);
+                } else {
+                    if (View.INVISIBLE == headProgressBar.getVisibility()) {
+                        headProgressBar.setVisibility(View.VISIBLE);
+                    }
+                    headProgressBar.setProgress(newProgress);
+                }
+                super.onProgressChanged(view, newProgress);
+            }
+        });
         mWebView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
