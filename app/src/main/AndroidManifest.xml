@@ -38,7 +38,7 @@
         <activity android:name=".activity.AftermarketInformationActivity" />
         <activity android:name=".activity.BrandInfoActivity" />
         <activity android:name=".activity.WebViewActivity"
-            android:configChanges="keyboardHidden|orientation"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             >
 
         </activity>
