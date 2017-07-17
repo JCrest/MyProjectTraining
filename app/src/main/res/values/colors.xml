@@ -8,8 +8,11 @@
 
     <color name="bg_grey">#F5F5F5</color>
     <color name="zzcomment_text">#ff707070</color>
+    <color name="mag_select_text">#c8c8c9</color>
+    <color name="mag_selected_text">#232629</color>
     <color name="detail_divider">#ffb4b4b4</color>
     <color name="brand_desc">#ffb4b4b4</color>
+    <color name="dialog_fragment_bg">#DAE0E6</color>
 
     <color name="font_main">#595959</color>
     <color name="buyer_reading">#444950</color>

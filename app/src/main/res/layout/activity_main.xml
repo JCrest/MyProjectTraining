@@ -28,11 +28,9 @@
         <RadioButton
             android:id="@+id/rb_shop"
             android:layout_width="0dp"
-
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-
             android:drawablePadding="3dp"
             android:drawableTop="@drawable/rb_shop_drawabletop_selector"
             android:gravity="center"

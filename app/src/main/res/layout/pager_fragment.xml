@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/radio_button"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:background="@color/dialog_fragment_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rg_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_mag_classify"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/rb_classify_drawabletop_selector"
+                    android:gravity="left"
+                    android:paddingLeft="90dp"
+                    android:paddingTop="15dp"
+                    android:text="分类"
+                    android:textColor="@drawable/rb_classify_drawabletop_textcolor_selector"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_mag_author"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/rb_author_drawabletop_selector"
+                    android:gravity="right"
+                    android:paddingRight="90dp"
+                    android:paddingTop="15dp"
+                    android:text="作者"
+                    android:textColor="@drawable/rb_classify_drawabletop_textcolor_selector"
+                    android:textSize="14sp" />
+            </RadioGroup>
+            <ImageView
+                android:id="@+id/id_tab_line"
+                android:layout_width="100dp"
+                android:layout_height="5dp"
+                android:background="@color/dialog_fragment_bg"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/dialog_fragment_bg" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:background="@color/radio_button"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/radio_button"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="杂志"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/user_tab_selected" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

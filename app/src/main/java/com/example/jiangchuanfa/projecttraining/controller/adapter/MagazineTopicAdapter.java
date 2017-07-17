@@ -65,7 +65,7 @@ public class MagazineTopicAdapter extends XRecyclerView.Adapter<MagazineTopicAda
             Glide.with(context).load(datas.get(position).getCover_img_new()).into(holder.ivMag);
             holder.tvTopicName.setText(datas.get(position).getTopic_name());
             holder.tvCatName.setText(datas.get(position).getCat_name());
-            holder.tvDate.setText(keys.get(position).substring(5, 11));
+            holder.tvDate.setText(keys.get(position).substring(5, 10));
 
             if(position == keys.size()) {
 
@@ -75,7 +75,7 @@ public class MagazineTopicAdapter extends XRecyclerView.Adapter<MagazineTopicAda
 
                 String date = datas.get(position).getAddtime().substring(0, 10);
                 String afterdate = datas.get(position+1).getAddtime().substring(0, 10);
-                Log.e(TAG, "onBindViewHolder: "+keys.get(position).substring(5, 11) );
+                Log.e(TAG, "onBindViewHolder: "+keys.get(position).substring(5, 10) );
                 Log.e("TAG", "afterdate"+afterdate);
                 if(afterdate.equals(date)) {
                     holder.tvDate.setVisibility(View.GONE);

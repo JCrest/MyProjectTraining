@@ -50,6 +50,7 @@ public class MagazineFragment extends BaseFragment {
     private List<String> keys;
     private List<MagazineBean> magazines;
 
+    DialogFragmentWindow fragmentWindow;
     @Override
     public View initView() {
         View view = View.inflate(getActivity(), R.layout.fragment_magazine, null);
@@ -70,12 +71,29 @@ public class MagazineFragment extends BaseFragment {
         //设置RecyclerView的适配器  先设置适配器等拿到数据的时候再刷新适配器
         adapter = new MagazineTopicAdapter(context);
         xrvMagazine.setAdapter(adapter);
+        fragmentWindow = new DialogFragmentWindow();
 
-//        xrvMagazine.setItemAnimator(new Sli);
+        //实现接口消失对话框  调用前面dialog fragment的接口
+//        fragmentWindow.setOnDatePickerClickListener(new DialogFragmentWindow.OnDatePickerClickListener() {
+//            @Override
+//            public void onCancelClick() {
+//                fragmentWindow.dismiss();
+//            }
+//        });
+
+        llMagazine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fragmentWindow.show(getFragmentManager(),"");
+            }
+        });
+
 
 
         return view;
     }
+
+
 
     @Override
     public void initData() {
