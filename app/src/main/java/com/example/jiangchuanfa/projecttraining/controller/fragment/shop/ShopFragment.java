@@ -1,5 +1,6 @@
 package com.example.jiangchuanfa.projecttraining.controller.fragment.shop;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -7,8 +8,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.jiangchuanfa.projecttraining.R;
-import com.example.jiangchuanfa.projecttraining.controller.adapter.MyFragmentPagerAdapter;
+import com.example.jiangchuanfa.projecttraining.activity.ShoppingCartAcrivity;
 import com.example.jiangchuanfa.projecttraining.base.BaseFragment;
+import com.example.jiangchuanfa.projecttraining.controller.adapter.MyFragmentPagerAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -67,7 +69,9 @@ public class ShopFragment extends BaseFragment {
                 showToast("搜索");
                 break;
             case R.id.ib_cart:
-                showToast("购物车");
+                Intent intent = new Intent(getActivity(), ShoppingCartAcrivity.class);
+                startActivity(intent);
+//                showToast("购物车");
                 break;
         }
     }

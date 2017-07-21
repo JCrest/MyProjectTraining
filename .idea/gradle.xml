@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AddSubView" />
             <option value="$PROJECT_DIR$/Image-Loader_library" />
             <option value="$PROJECT_DIR$/L20_Fragment3" />
             <option value="$PROJECT_DIR$/RecyclerViewTest" />

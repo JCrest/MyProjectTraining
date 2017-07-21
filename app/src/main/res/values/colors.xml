@@ -13,6 +13,11 @@
     <color name="detail_divider">#ffb4b4b4</color>
     <color name="brand_desc">#ffb4b4b4</color>
     <color name="dialog_fragment_bg">#DAE0E6</color>
+    <color name="recommend_line">#333537</color>
+    <color name="recommend_sclected">#444950</color>
+    <color name="recommend_nomal">#313335</color>
+    <color name="cart_bottom1">#3A668E</color>
+    <color name="cart_bottom2">#6F98C3</color>
 
     <color name="font_main">#595959</color>
     <color name="buyer_reading">#444950</color>

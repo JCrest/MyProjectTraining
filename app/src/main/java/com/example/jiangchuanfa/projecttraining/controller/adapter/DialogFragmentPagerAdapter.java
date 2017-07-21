@@ -23,7 +23,8 @@ public class DialogFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        Log.e(TAG, "getItem  :  "+mFragments.get(position));
+        Log.e(TAG, "getItem  :  " + mFragments.get(position));
+        Log.e(TAG, "getItem  :  " + mFragments.size());
         return this.mFragments.get(position);
     }
 

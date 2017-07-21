@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.example.jiangchuanfa.projecttraining.R;
 import com.example.jiangchuanfa.projecttraining.base.BaseFragment;
 import com.example.jiangchuanfa.projecttraining.config.Api;
+import com.example.jiangchuanfa.projecttraining.controller.Dialog.RecommendDialogFragment;
 import com.example.jiangchuanfa.projecttraining.controller.adapter.ExpertAdapter;
 import com.example.jiangchuanfa.projecttraining.modle.bean.ExpertBean;
 import com.google.gson.Gson;
@@ -40,6 +41,7 @@ public class ExpertFragment extends BaseFragment {
     ImageButton ibNavigationMenu;
     private ExpertAdapter adapter;
     private String url;
+    private RecommendDialogFragment recommendDialogFragment;
 
     @Override
     public View initView() {
@@ -52,12 +54,20 @@ public class ExpertFragment extends BaseFragment {
         adapter = new ExpertAdapter(context);
         Xrecyclerview.setAdapter(adapter);
         exchangeMenuState();
+        recommendDialogFragment = new RecommendDialogFragment();
         return view;
     }
 
     private void exchangeMenuState() {
         ibCart.setVisibility(View.GONE);
         ibNavigationMenu.setVisibility(View.VISIBLE);
+        ibNavigationMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                recommendDialogFragment.show(getFragmentManager(),"");
+
+            }
+        });
 
 
     }
@@ -106,6 +116,7 @@ public class ExpertFragment extends BaseFragment {
         Log.e("TAG", "数组解析数据成功======" + expertBean.getData().getItems().get(0).getDuty());
         adapter.refresh(expertBean.getData().getItems());
     }
+
 
 
     @Override

@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.example.jiangchuanfa.projecttraining.R;
 import com.example.jiangchuanfa.projecttraining.base.BaseFragment;
 import com.example.jiangchuanfa.projecttraining.config.Api;
+import com.example.jiangchuanfa.projecttraining.controller.Dialog.DialogFragmentWindow;
 import com.example.jiangchuanfa.projecttraining.controller.adapter.MagazineTopicAdapter;
 import com.example.jiangchuanfa.projecttraining.modle.bean.MagazineBean;
 import com.google.gson.Gson;
@@ -50,7 +51,7 @@ public class MagazineFragment extends BaseFragment {
     private List<String> keys;
     private List<MagazineBean> magazines;
 
-    DialogFragmentWindow fragmentWindow;
+    private DialogFragmentWindow fragmentWindow;
     @Override
     public View initView() {
         View view = View.inflate(getActivity(), R.layout.fragment_magazine, null);

@@ -57,8 +57,10 @@
                     android:textSize="14sp" />
             </RadioGroup>
             <ImageView
+                android:layout_gravity="clip_horizontal"
                 android:id="@+id/id_tab_line"
-                android:layout_width="100dp"
+                android:layout_marginLeft="80dp"
+                android:layout_width="50dp"
                 android:layout_height="5dp"
                 android:background="@color/dialog_fragment_bg"/>
 
